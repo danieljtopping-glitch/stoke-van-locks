@@ -5,12 +5,15 @@ import CookieBanner from '../components/CookieBanner.astro';
 import StickyMobileBar from '../components/StickyMobileBar.astro';
 import { SITE } from '../config/site';
 
-// Import self-hosted Inter font (avoids Google Fonts GDPR concern)
+// Import self-hosted Inter font (for body text)
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/inter/800.css';
+
+// Import self-hosted Outfit font (for headings)
+import '@fontsource/outfit/700.css';
+import '@fontsource/outfit/800.css';
+import '@fontsource/outfit/900.css';
 
 interface Props {
   title: string;
@@ -99,7 +102,7 @@ const localBusinessSchema = {
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
   </head>
-  <body class="font-sans text-slate-900 bg-white">
+  <body class="font-sans text-white bg-black">
     <Header />
     <main class="pb-16 sm:pb-0">
       <slot />

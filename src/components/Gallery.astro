@@ -1,0 +1,67 @@
+---
+// Gallery section — placeholder until real photos are provided.
+// To add real photos:
+// 1. Place .jpg or .webp files in /public/images/
+// 2. Replace the placeholder array below with real image data
+// 3. Use Astro's <Image /> component from 'astro:assets' for optimised output
+
+const placeholders = [
+  { caption: 'Deadlock installation — Ford Transit' },
+  { caption: 'Slam lock fitted — Vauxhall Vivaro' },
+  { caption: 'Hook lock installation — Mercedes Sprinter' },
+  { caption: 'Side door deadlock — VW Transporter' },
+  { caption: 'Rear barn door security upgrade' },
+  { caption: 'Multi-lock install — fleet vehicle' },
+];
+---
+
+<section id="gallery" class="bg-white scroll-mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
+
+    <!-- Section heading -->
+    <div class="max-w-2xl mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+        Our Work
+      </h2>
+      <p class="text-slate-600 text-base leading-relaxed">
+        Every installation is carried out to a high standard — clean, precise, and built to last.
+        Photos of recent jobs coming soon.
+      </p>
+    </div>
+
+    <!-- Photo coming soon notice -->
+    <div class="bg-amber-50 border border-amber-200 rounded-xl px-6 py-4 mb-8 flex items-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <p class="text-sm text-amber-800">
+        <strong>Installation photos coming soon.</strong> In the meantime, please ask us for recent examples — we're happy to share.
+      </p>
+    </div>
+
+    <!-- Placeholder grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {placeholders.map((item) => (
+        <div class="group relative bg-slate-100 rounded-xl overflow-hidden aspect-[4/3] flex flex-col items-center justify-center border border-slate-200 hover:border-amber-300 transition-colors">
+          <!-- Camera icon placeholder -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-slate-300 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <p class="text-slate-400 text-xs text-center px-4">{item.caption}</p>
+          <p class="text-slate-300 text-xs mt-1">Photo coming soon</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Ask for examples CTA -->
+    <p class="text-center text-slate-500 text-sm mt-8">
+      Want to see recent work before committing?
+      <a href="#contact" class="text-amber-600 hover:text-amber-500 font-semibold transition-colors underline underline-offset-2">
+        Get in touch and ask for examples.
+      </a>
+    </p>
+
+  </div>
+</section>

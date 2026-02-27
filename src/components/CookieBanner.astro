@@ -1,0 +1,65 @@
+---
+// Cookie consent banner
+// Uses localStorage (not a cookie) to store preference — avoids the irony
+// of setting a cookie to ask about cookies.
+// No analytics are loaded by default. If you add analytics later, initialise
+// them inside the 'svl:consent:accepted' event listener below.
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-navy-900 text-white shadow-2xl hidden"
+  role="dialog"
+  aria-label="Cookie consent"
+  aria-live="polite"
+  style="padding-bottom: env(safe-area-inset-bottom)"
+>
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <p class="text-sm text-slate-300 leading-relaxed">
+      We use essential functionality to make this site work. We don't currently use tracking or analytics cookies.
+      <a href="/cookies" class="underline text-amber-400 hover:text-amber-300 transition-colors">
+        Cookie policy
+      </a>.
+    </p>
+    <div class="flex gap-3 shrink-0">
+      <button
+        id="cookie-reject"
+        class="px-4 py-2 text-sm border border-slate-500 rounded text-slate-300 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500"
+        aria-label="Reject optional cookies"
+      >
+        Reject
+      </button>
+      <button
+        id="cookie-accept"
+        class="px-4 py-2 text-sm bg-amber-500 text-navy-900 font-semibold rounded hover:bg-amber-400 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300"
+        aria-label="Accept cookies"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var CONSENT_KEY = 'svl_cookie_consent';
+    var banner = document.getElementById('cookie-banner');
+
+    // Show banner only if no decision has been made yet
+    if (!localStorage.getItem(CONSENT_KEY) && banner) {
+      banner.classList.remove('hidden');
+    }
+
+    document.getElementById('cookie-accept')?.addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'accepted');
+      banner?.classList.add('hidden');
+      // If you add analytics in future, initialise it here:
+      // document.dispatchEvent(new Event('svl:consent:accepted'));
+    });
+
+    document.getElementById('cookie-reject')?.addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'rejected');
+      banner?.classList.add('hidden');
+    });
+  })();
+</script>

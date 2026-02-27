@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- OG image placeholder — replace with a real branded PNG before launch -->
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a2744"/>
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Amber accent bar -->
+  <rect x="80" y="240" width="8" height="150" fill="#f59e0b" rx="4"/>
+  <!-- Business name -->
+  <text x="112" y="295" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Stoke Van Locks</text>
+  <!-- Tagline -->
+  <text x="112" y="355" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="400" fill="#94a3b8">Van Lock Fitting · Stoke-on-Trent &amp; 20-Mile Radius</text>
+  <!-- Phone number -->
+  <text x="112" y="420" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="700" fill="#f59e0b">07843 353 100</text>
+  <!-- Lock icon (right side) -->
+  <g transform="translate(950, 215)">
+    <rect x="0" y="100" width="140" height="105" rx="16" fill="#f59e0b"/>
+    <path d="M25 100V60a45 45 0 0190 0v40" fill="none" stroke="#f59e0b" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="70" cy="148" r="16" fill="#1a2744"/>
+    <rect x="62" y="148" width="16" height="24" rx="6" fill="#1a2744"/>
+  </g>
+</svg>

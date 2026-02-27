@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE } from '../config/site';
+---
+
+<Layout
+  title="Cookie Policy"
+  description={`Cookie Policy for ${SITE.name}. Information about how we use cookies and local storage.`}
+  noindex={true}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+
+    <!-- Breadcrumb -->
+    <p class="text-sm text-slate-400 mb-6">
+      <a href="/" class="hover:text-amber-600 transition-colors">Home</a>
+      <span class="mx-2">›</span>
+      Cookie Policy
+    </p>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">Cookie Policy</h1>
+    <p class="text-slate-500 text-sm mb-10">Last updated: February 2026</p>
+
+    <div class="prose prose-slate max-w-none text-slate-700 space-y-8">
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">What Are Cookies?</h2>
+        <p class="text-sm leading-relaxed">
+          Cookies are small text files that websites can store on your device. They are used
+          for various purposes, including remembering your preferences, keeping you logged in,
+          and tracking how visitors use a site.
+        </p>
+        <p class="text-sm leading-relaxed mt-2">
+          This page explains how <strong>{SITE.name}</strong> uses cookies and related technologies.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">Cookies We Use</h2>
+
+        <div class="bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-4">
+          <h3 class="font-bold text-green-900 text-sm mb-2">Good news: we don't currently use tracking cookies</h3>
+          <p class="text-sm text-green-800 leading-relaxed">
+            We do not use Google Analytics, Facebook Pixel, or any other third-party tracking service.
+            We don't serve advertising cookies. We don't use session cookies for login purposes.
+          </p>
+        </div>
+
+        <h3 class="text-base font-bold text-slate-900 mb-2">Cookie Consent Preference (Local Storage)</h3>
+        <p class="text-sm leading-relaxed mb-3">
+          When you interact with the cookie notice at the bottom of our site, we save your preference
+          (accepted or rejected) in your browser's <strong>localStorage</strong>. This is stored
+          entirely within your own browser — no data is sent to our servers.
+        </p>
+        <table class="w-full text-sm border-collapse border border-slate-200 rounded-lg overflow-hidden mb-4">
+          <thead>
+            <tr class="bg-slate-50">
+              <th class="text-left px-4 py-2 border-b border-slate-200 font-semibold text-slate-700">Key</th>
+              <th class="text-left px-4 py-2 border-b border-slate-200 font-semibold text-slate-700">Purpose</th>
+              <th class="text-left px-4 py-2 border-b border-slate-200 font-semibold text-slate-700">Stored in</th>
+              <th class="text-left px-4 py-2 border-b border-slate-200 font-semibold text-slate-700">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border-b border-slate-100 font-mono text-xs">svl_cookie_consent</td>
+              <td class="px-4 py-2 border-b border-slate-100">Stores your accept/reject choice</td>
+              <td class="px-4 py-2 border-b border-slate-100">localStorage (your browser only)</td>
+              <td class="px-4 py-2 border-b border-slate-100">Until you clear your browser data</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-slate-500">
+          Note: localStorage is not technically a cookie — it does not get sent with HTTP requests
+          and is only accessible by our website within your browser. Under UK GDPR guidance, similar
+          storage technologies to cookies may require the same level of transparency.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">Self-Hosted Fonts</h2>
+        <p class="text-sm leading-relaxed">
+          This site uses the <strong>Inter</strong> typeface, loaded from files hosted on our own
+          web server (via Netlify's CDN). Unlike loading from Google Fonts, this does not send your
+          IP address or any other data to Google's servers.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">Third-Party Services</h2>
+        <p class="text-sm leading-relaxed mb-2">
+          Our website is hosted by <strong>Netlify, Inc.</strong> Netlify's servers receive standard
+          web server log data (including your IP address) when you visit any page. This is standard
+          behaviour for any hosted website and is covered by
+          <a href="https://www.netlify.com/privacy" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-500">
+            Netlify's Privacy Policy
+          </a>.
+        </p>
+        <p class="text-sm leading-relaxed">
+          Form submissions via our quote request form are processed and stored by Netlify Forms.
+          See our <a href="/privacy" class="text-amber-600 hover:text-amber-500">Privacy Policy</a> for details.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">How to Manage or Delete Cookie Data</h2>
+        <p class="text-sm leading-relaxed mb-2">
+          To remove the consent preference stored in localStorage, you can:
+        </p>
+        <ol class="list-decimal list-inside space-y-1.5 text-sm">
+          <li>Open your browser's developer tools (press F12)</li>
+          <li>Go to the "Application" or "Storage" tab</li>
+          <li>Select "Local Storage" and find our site</li>
+          <li>Delete the <code class="bg-slate-100 px-1 rounded text-xs font-mono">svl_cookie_consent</code> key</li>
+        </ol>
+        <p class="text-sm leading-relaxed mt-3">
+          Alternatively, clearing all site data from your browser settings will remove this preference.
+        </p>
+        <p class="text-sm leading-relaxed mt-2">
+          You can also find general cookie management guidance at:
+          <a href="https://ico.org.uk/your-data-matters/online/cookies/" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-500">
+            ico.org.uk/your-data-matters/online/cookies/
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">Changes to This Policy</h2>
+        <p class="text-sm leading-relaxed">
+          If we add analytics or other cookies in future, we will update this policy and our cookie
+          banner accordingly. Check the date at the top of this page to see when it was last updated.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-900 mb-3">Contact Us</h2>
+        <p class="text-sm leading-relaxed">
+          Questions about cookies or your privacy? Please contact us:
+        </p>
+        <div class="mt-3 space-y-1 text-sm">
+          <p><strong>Email:</strong> <a href={`mailto:${SITE.email}`} class="text-amber-600 hover:text-amber-500">{SITE.email}</a></p>
+          <p><strong>Phone:</strong> <a href={SITE.phone.href} class="text-amber-600 hover:text-amber-500">{SITE.phone.display}</a></p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back link -->
+    <div class="mt-12 pt-6 border-t border-slate-200">
+      <a href="/" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-500 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </div>
+</Layout>

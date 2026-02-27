@@ -1,0 +1,108 @@
+---
+// Reviews / Testimonials section
+// Placeholder reviews are clearly marked as examples.
+// Replace with real customer reviews before launch.
+// Consider pulling from Google Business Profile reviews.
+
+const placeholderReviews = [
+  {
+    stars: 5,
+    text: "Had two slam locks fitted on my Transit. Turned up on time, job done in under an hour, nice tidy fit. Would definitely recommend — and the price was fair.",
+    name: "J. B.",
+    location: "Newcastle-under-Lyme",
+    note: "placeholder",
+  },
+  {
+    stars: 5,
+    text: "Very knowledgeable chap. He explained the difference between the lock types and helped me decide what was best for my van. Really pleased with the result.",
+    name: "S. M.",
+    location: "Stoke-on-Trent",
+    note: "placeholder",
+  },
+  {
+    stars: 5,
+    text: "Sorted our fleet vehicles — six vans fitted in one day at our depot. Efficient, professional, and great value. Will be using again.",
+    name: "R. T.",
+    location: "Stafford",
+    note: "placeholder",
+  },
+];
+---
+
+<section id="reviews" class="bg-slate-50 scroll-mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
+
+    <!-- Section heading -->
+    <div class="max-w-2xl mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+        What Customers Say
+      </h2>
+      <p class="text-slate-600 text-base leading-relaxed">
+        We take pride in the work we do and the service we deliver. Here's what some of our
+        customers have said.
+      </p>
+    </div>
+
+    <!-- Placeholder notice -->
+    <div class="bg-blue-50 border border-blue-200 rounded-xl px-5 py-4 mb-8 flex items-start gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <!-- TODO: Replace placeholder reviews with real customer testimonials before launch -->
+      <p class="text-sm text-blue-800">
+        <strong>For site owners:</strong> These are example reviews. Replace with real customer testimonials
+        before publishing. Consider asking satisfied customers to leave a Google Business review, then
+        display those here.
+      </p>
+    </div>
+
+    <!-- Review cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      {placeholderReviews.map((review) => (
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col">
+          <!-- Stars -->
+          <div class="flex gap-0.5 mb-3" aria-label={`${review.stars} out of 5 stars`}>
+            {Array.from({ length: review.stars }).map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <!-- Review text -->
+          <blockquote class="text-slate-700 text-sm leading-relaxed mb-4 flex-1">
+            "{review.text}"
+          </blockquote>
+
+          <!-- Reviewer -->
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-navy-100 rounded-full flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-navy-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-slate-900 font-semibold text-sm">{review.name}</p>
+              <p class="text-slate-400 text-xs">{review.location}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA to ask for references -->
+    <div class="text-center">
+      <p class="text-slate-600 text-sm mb-4">
+        Want to speak to a recent customer? Just ask — we're happy to put you in touch with
+        people who've had locks fitted.
+      </p>
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 border border-slate-300 text-slate-700 hover:border-amber-500 hover:text-amber-600 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+      >
+        Get in Touch
+      </a>
+    </div>
+
+  </div>
+</section>

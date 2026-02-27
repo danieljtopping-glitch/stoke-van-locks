@@ -116,6 +116,8 @@ import { SITE } from '../config/site';
             <label>Don't fill this out: <input name="bot-field" /></label>
           </p>
 
+          <input type="hidden" name="form-name" value="quote-request" />
+
           <h3 class="font-display text-lg font-bold text-white mb-6">Request a Quote</h3>
 
           <!-- Personal details -->
@@ -130,7 +132,7 @@ import { SITE } from '../config/site';
                 name="full-name"
                 required
                 autocomplete="name"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                 placeholder="Your name"
               />
             </div>
@@ -144,7 +146,7 @@ import { SITE } from '../config/site';
                 name="phone"
                 required
                 autocomplete="tel"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                 placeholder="07700 900 000"
               />
             </div>
@@ -160,7 +162,7 @@ import { SITE } from '../config/site';
                 id="email"
                 name="email"
                 autocomplete="email"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                 placeholder="you@example.com"
               />
             </div>
@@ -174,7 +176,7 @@ import { SITE } from '../config/site';
                 name="postcode"
                 required
                 autocomplete="postal-code"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                 placeholder="ST1 1AA"
               />
             </div>
@@ -193,7 +195,7 @@ import { SITE } from '../config/site';
                   id="van-make"
                   name="van-make"
                   required
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                   placeholder="e.g. Ford"
                 />
               </div>
@@ -206,7 +208,7 @@ import { SITE } from '../config/site';
                   id="van-model"
                   name="van-model"
                   required
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                   placeholder="e.g. Transit"
                 />
               </div>
@@ -218,7 +220,7 @@ import { SITE } from '../config/site';
                   type="text"
                   id="van-year"
                   name="van-year"
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                   placeholder="e.g. 2021"
                   maxlength="4"
                 />
@@ -237,7 +239,7 @@ import { SITE } from '../config/site';
                 id="doors"
                 name="doors"
                 required
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
                 placeholder="e.g. Both rear doors + offside sliding"
               />
             </div>
@@ -249,7 +251,7 @@ import { SITE } from '../config/site';
                 id="lock-type"
                 name="lock-type"
                 required
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-black"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-white"
               >
                 <option value="" disabled selected>Select a lock type</option>
                 <option value="deadlock">Deadlock</option>
@@ -269,7 +271,7 @@ import { SITE } from '../config/site';
               id="notes"
               name="notes"
               rows="3"
-              class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors resize-none bg-zinc-900"
+              class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors resize-none bg-white"
               placeholder="Anything else I should know? e.g. fleet of vehicles, specific concerns, access restrictions..."
             ></textarea>
           </div>
@@ -295,7 +297,7 @@ import { SITE } from '../config/site';
               <select
                 id="preferred-time"
                 name="preferred-time"
-                class="border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-red-500 bg-black"
+                class="border border-zinc-700 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-red-500 bg-white"
               >
                 <option value="morning">Morning (8am–12pm)</option>
                 <option value="afternoon">Afternoon (12pm–5pm)</option>

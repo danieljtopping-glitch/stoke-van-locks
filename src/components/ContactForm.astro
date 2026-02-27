@@ -101,11 +101,32 @@ import { SITE } from '../config/site';
 
       <!-- Right: Quote form -->
       <div>
+        <!--
+          NETLIFY FORMS SETUP
+          This hidden form lets Netlify's build scanner detect the form.
+          The visible form below is what users actually submit.
+          Both must share the same `name` attribute.
+        -->
+        <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="full-name" />
+          <input type="tel" name="phone" />
+          <input type="email" name="email" />
+          <input type="text" name="postcode" />
+          <input type="text" name="van-make" />
+          <input type="text" name="van-model" />
+          <input type="text" name="van-year" />
+          <input type="text" name="doors" />
+          <select name="lock-type"></select>
+          <textarea name="notes"></textarea>
+          <input type="checkbox" name="request-callback" />
+          <select name="preferred-time"></select>
+        </form>
+
         <!-- Visible form -->
         <form
           name="quote-request"
           method="POST"
-          action="/?success=true#contact"
+          action="/thank-you/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="bg-black rounded-2xl p-6 sm:p-8 shadow-xl"

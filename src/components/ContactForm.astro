@@ -104,7 +104,7 @@ import { SITE } from '../config/site';
         <form
           name="quote-request"
           method="POST"
-          action="/thank-you"
+          action="/thank-you/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="bg-black rounded-2xl p-6 sm:p-8 shadow-xl"
@@ -130,7 +130,7 @@ import { SITE } from '../config/site';
                 name="full-name"
                 required
                 autocomplete="name"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                 placeholder="Your name"
               />
             </div>
@@ -144,7 +144,7 @@ import { SITE } from '../config/site';
                 name="phone"
                 required
                 autocomplete="tel"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                 placeholder="07700 900 000"
               />
             </div>
@@ -160,7 +160,7 @@ import { SITE } from '../config/site';
                 id="email"
                 name="email"
                 autocomplete="email"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                 placeholder="you@example.com"
               />
             </div>
@@ -174,7 +174,7 @@ import { SITE } from '../config/site';
                 name="postcode"
                 required
                 autocomplete="postal-code"
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                 placeholder="ST1 1AA"
               />
             </div>
@@ -193,7 +193,7 @@ import { SITE } from '../config/site';
                   id="van-make"
                   name="van-make"
                   required
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                   placeholder="e.g. Ford"
                 />
               </div>
@@ -206,7 +206,7 @@ import { SITE } from '../config/site';
                   id="van-model"
                   name="van-model"
                   required
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                   placeholder="e.g. Transit"
                 />
               </div>
@@ -218,7 +218,7 @@ import { SITE } from '../config/site';
                   type="text"
                   id="van-year"
                   name="van-year"
-                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                  class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                   placeholder="e.g. 2021"
                   maxlength="4"
                 />
@@ -237,7 +237,7 @@ import { SITE } from '../config/site';
                 id="doors"
                 name="doors"
                 required
-                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors bg-zinc-900"
                 placeholder="e.g. Both rear doors + offside sliding"
               />
             </div>
@@ -269,7 +269,7 @@ import { SITE } from '../config/site';
               id="notes"
               name="notes"
               rows="3"
-              class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors resize-none"
+              class="w-full border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors resize-none bg-zinc-900"
               placeholder="Anything else I should know? e.g. fleet of vehicles, specific concerns, access restrictions..."
             ></textarea>
           </div>

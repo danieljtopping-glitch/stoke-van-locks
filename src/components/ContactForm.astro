@@ -104,15 +104,12 @@ import { SITE } from '../config/site';
         <form
           name="quote-request"
           method="POST"
-          action="/thank-you/"
-          enctype="application/x-www-form-urlencoded"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          netlify-honeypot="bot-field"
+          action="/thank-you/"
           class="bg-black rounded-2xl p-6 sm:p-8 shadow-xl"
           id="quote-form"
         >
-
-          <input type="hidden" name="form-name" value="quote-request" />
 
           <!-- Honeypot (hidden from humans, bots fill it in) -->
           <p class="hidden" aria-hidden="true">

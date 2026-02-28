@@ -1,5 +1,5 @@
 // =============================================================================
-// SITE CONFIGURATION — Single source of truth for all business data.
+// SITE CONFIGURATION - Single source of truth for all business data.
 // Update this file to change contact details, services, areas, or FAQs.
 // =============================================================================
 
@@ -14,7 +14,7 @@ export const SITE = {
     href: 'tel:+447843353100',
   },
   whatsapp: {
-    // Pre-filled message — URL-encoded
+    // Pre-filled message - URL-encoded
     href: 'https://wa.me/447843353100?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20van%20locks.%20My%20postcode%20is%20...',
     label: 'WhatsApp Me',
   },
@@ -25,7 +25,7 @@ export const SITE = {
     country: 'GB',
   },
   serviceArea: 'Stoke-on-Trent and a 20-mile radius',
-  // Optional tagline — remove if not wanted
+  // Optional tagline - remove if not wanted
   // TODO: Confirm with client whether to use this tagline
   optionalTagline: "If your van needs locking, call Dan Topping.",
 } as const;
@@ -54,9 +54,9 @@ export const SERVICES = [
     title: 'Slam Locks',
     icon: 'slam',
     description:
-      'Locks automatically the moment the door closes — ideal for couriers and delivery drivers who need hands-free, effortless security.',
+      'Locks automatically the moment the door closes - ideal for couriers and delivery drivers who need hands-free, effortless security.',
     details: [
-      'Locks on door closure — no fumbling with keys',
+      'Locks on door closure - no fumbling with keys',
       'Master key override available',
       'Fast, reliable, and popular with delivery drivers',
       'Fits rear and side doors',
@@ -82,12 +82,12 @@ export const SERVICES = [
     title: 'Repairs & Replacements',
     icon: 'repair',
     description:
-      'Damaged, seized, or worn van locks repaired or replaced — I carry stock of common parts and can often fix the issue the same day.',
+      'Damaged, seized, or worn van locks repaired or replaced - I carry stock of common parts and can often fix the issue the same day.',
     details: [
       'Factory lock repairs and replacements',
       'Aftermarket security lock repairs',
       'Lost or damaged key cylinder replacements',
-      'Quick turnaround — often same or next day',
+      'Quick turnaround - often same or next day',
     ],
     whoFor: 'Anyone with a faulty or damaged van lock',
   },
@@ -96,7 +96,7 @@ export const SERVICES = [
     title: 'Security Upgrades & Advice',
     icon: 'upgrade',
     description:
-      'Not sure what you need? I assess your van, your cargo, and your risk — then recommend the right combination of locks for your situation.',
+      'Not sure what you need? I assess your van, your cargo, and your risk - then recommend the right combination of locks for your situation.',
     details: [
       'Free, no-obligation security assessment',
       'Combined lock packages for maximum protection',
@@ -138,7 +138,7 @@ export const FAQS = [
   {
     question: 'What types of van lock do you recommend?',
     answer:
-      "It depends on how you use your van. Deadlocks are a solid all-round choice and work alongside your existing factory lock. Slam locks are brilliant for couriers or delivery drivers who open and close doors dozens of times a day — they lock automatically on closure. Hook locks offer the highest resistance to lever attacks and are ideal if you're carrying high-value tools. I'm happy to chat through your situation and advise the best option — just get in touch.",
+      "It depends on how you use your van. Deadlocks are a solid all-round choice and work alongside your existing factory lock. Slam locks are brilliant for couriers or delivery drivers who open and close doors dozens of times a day - they lock automatically on closure. Hook locks offer the highest resistance to lever attacks and are ideal if you're carrying high-value tools. I'm happy to chat through your situation and advise the best option - just get in touch.",
   },
   {
     question: 'How long does fitting take?',
@@ -148,12 +148,12 @@ export const FAQS = [
   {
     question: 'Can you fit locks at my home or workplace?',
     answer:
-      "Yes — I'm fully mobile. I come to you at your home, workplace, or any convenient location within my service area. Just let me know your postcode when you get in touch and I'll confirm I can reach you.",
+      "Yes - I'm fully mobile. I come to you at your home, workplace, or any convenient location within my service area. Just let me know your postcode when you get in touch and I'll confirm I can reach you.",
   },
   {
     question: 'Do I need to provide shelter or cover for the fitting?',
     answer:
-      "Ideally, fitting is carried out under cover or in dry conditions — both for the quality of the installation and my comfort and the protection of power tools. If you have a garage, driveway under a car port, or similar, that's ideal. In good weather, a driveway works fine. I'll always make a sensible call on the day.",
+      "Ideally, fitting is carried out under cover or in dry conditions - both for the quality of the installation and my comfort and the protection of power tools. If you have a garage, driveway under a car port, or similar, that's ideal. In good weather, a driveway works fine. I'll always make a sensible call on the day.",
   },
   {
     question: 'Do you offer emergency lockout services?',
@@ -163,17 +163,17 @@ export const FAQS = [
   {
     question: 'How does the quote process work?',
     answer:
-      "Get in touch by phone, WhatsApp, or the form on this page. I'll ask a few quick questions — your van make, model, and year; which doors you want securing; and what lock type you're looking for. I'll then provide a clear, no-obligation quote. Quotes are valid for 30 days.",
+      "Get in touch by phone, WhatsApp, or the form on this page. I'll ask a few quick questions - your van make, model, and year; which doors you want securing; and what lock type you're looking for. I'll then provide a clear, no-obligation quote. Quotes are valid for 30 days.",
   },
   {
     question: 'How quickly can you fit?',
     answer:
-      'I typically aim to fit within one week of your quote being accepted. If you need something sooner, just ask — I can often accommodate within a few days, subject to availability.',
+      'I typically aim to fit within one week of your quote being accepted. If you need something sooner, just ask - I can often accommodate within a few days, subject to availability.',
   },
   {
     question: 'What vans do you cover?',
     answer:
-      "I carry lock kits for virtually every major van make and model — Ford Transit, Vauxhall Vivaro, Mercedes Sprinter, VW Transporter, Renault Trafic, Peugeot Expert, Citroën Dispatch, and many more. There are a small number of exceptions; just ask me if you're unsure about your specific van.",
+      "I carry lock kits for virtually every major van make and model - Ford Transit, Vauxhall Vivaro, Mercedes Sprinter, VW Transporter, Renault Trafic, Peugeot Expert, Citroën Dispatch, and many more. There are a small number of exceptions; just ask me if you're unsure about your specific van.",
   },
   {
     question: 'What are your payment methods?',

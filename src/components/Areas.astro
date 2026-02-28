@@ -71,27 +71,19 @@ import { AREAS, SITE } from '../config/site';
         </div>
       </div>
 
-      <!-- Right: Map placeholder -->
+      <!-- Right: Map -->
       <div>
-        <div class="bg-zinc-800 rounded-xl flex flex-col items-center justify-center aspect-[4/3] text-zinc-500 border border-zinc-700 relative overflow-hidden">
-          <!-- Placeholder visual -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <!-- Concentric circles representing the coverage radius -->
-            <div class="absolute w-72 h-72 rounded-full border-2 border-red-500/20"></div>
-            <div class="absolute w-48 h-48 rounded-full border-2 border-red-500/40"></div>
-            <div class="absolute w-24 h-24 rounded-full border-2 border-red-500/60"></div>
-          </div>
-          <div class="relative z-10 text-center px-6">
+        <div class="bg-zinc-800 rounded-xl flex flex-col aspect-[4/3] border border-zinc-700 relative overflow-hidden">
+          <div id="service-map" class="absolute inset-0 z-0"></div>
+          
+          <!-- Fallback/Overlay Text (hidden by JS when map loads) -->
+          <div id="map-fallback" class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pointer-events-none bg-zinc-900/80">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-500 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <p class="text-zinc-200 font-semibold text-sm mb-1">Stoke-on-Trent</p>
-            <p class="text-zinc-400 text-xs">~20-mile service radius</p>
-            <p class="text-zinc-500 text-xs mt-3 italic">
-              Map coming soon
-              <!-- TODO: Replace with an OpenStreetMap embed or static map image -->
-            </p>
+            <p class="text-zinc-200 font-semibold text-sm mb-1">Stoke-on-Trent (ST4 4QE)</p>
+            <p class="text-zinc-400 text-xs">Loading interactive map...</p>
           </div>
         </div>
         <p class="text-xs text-zinc-500 mt-3 text-center">
@@ -102,3 +94,52 @@ import { AREAS, SITE } from '../config/site';
     </div>
   </div>
 </section>
+
+<!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<style>
+  /* Ensure map tiles stack correctly under the nav */
+  #service-map { z-index: 1; }
+  /* Custom popup styling */
+  .leaflet-popup-content-wrapper { background: #18181b; color: #f4f4f5; border: 1px solid #3f3f46; border-radius: 0.5rem; }
+  .leaflet-popup-tip { background: #18181b; border: 1px solid #3f3f46; }
+  .leaflet-popup-close-button { color: #a1a1aa !important; }
+</style>
+
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ST4 4QE Coordinates
+    var centerLat = 52.979443;
+    var centerLng = -2.194152;
+    var radiusMiles = 20;
+    var radiusMeters = radiusMiles * 1609.34;
+
+    // Initialize Map
+    var map = L.map('service-map', {
+        scrollWheelZoom: false, // Prevent page scrolling from getting trapped
+    }).setView([centerLat, centerLng], 9);
+
+    // Hide fallback overlay now that JS runs
+    var fallback = document.getElementById('map-fallback');
+    if (fallback) fallback.style.display = 'none';
+
+    // Add Carto Dark styling tiles (matches website aesthetic perfectly)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    // Add Marker for Base
+    var marker = L.marker([centerLat, centerLng]).addTo(map);
+    marker.bindPopup("<b>Stoke Van Locks</b><br>Mobile Service Base").openPopup();
+
+    // Add 20-mile Radius Circle
+    L.circle([centerLat, centerLng], {
+      color: '#ef4444',      // Tailwind Red-500 border
+      fillColor: '#ef4444',
+      fillOpacity: 0.15,     // Light transparent fill
+      weight: 2,             // Thin crisp border
+    }).setRadius(radiusMeters).addTo(map);
+  });
+</script>

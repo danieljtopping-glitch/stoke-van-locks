@@ -80,7 +80,7 @@ export const CONTENT = {
             {
                 title: 'I Come to You',
                 desc1: 'Once you\'re happy with the quote, I arrange a fitting time to suit you. I\'re fully mobile - I come to your home, workplace, or any convenient location within my service area.',
-                desc2: 'Most installations take 60–90 minutes. I aim for XTICKS, often sooner if needed.',
+                desc2: 'Most installations take 60-90 minutes. I aim for XTICKS, often sooner if needed.',
                 highlight2: 'within one week'
             },
             {

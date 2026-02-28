@@ -153,7 +153,7 @@ export const FAQS = [
   {
     question: 'Do I need to provide shelter or cover for the fitting?',
     answer:
-      "Ideally, fitting is carried out under cover or in dry conditions — both for the quality of the installation and the comfort of my engineer. If you have a garage, driveway under a car port, or similar, that's ideal. In good weather, a driveway works fine. I'll always make a sensible call on the day.",
+      "Ideally, fitting is carried out under cover or in dry conditions — both for the quality of the installation and my comfort and the protection of power tools. If you have a garage, driveway under a car port, or similar, that's ideal. In good weather, a driveway works fine. I'll always make a sensible call on the day.",
   },
   {
     question: 'Do you offer emergency lockout services?',

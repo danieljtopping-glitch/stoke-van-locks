@@ -5,7 +5,7 @@ export const CONTENT = {
         headingLine2: 'Across',
         headingHighlight: 'Stoke-on-Trent',
         subheadline: 'Protect your tools. Protect your livelihood. Deadlocks, slam locks, and hook locks supplied and fitted by a mobile security specialist - at your home, your workplace, or wherever suits you.',
-        secondaryDetail: 'Locksmith since 2007 · Hundreds of installs · Warranty-backed products · Fast turnaround',
+        secondaryDetail: 'Locksmith since 2007 · Warranty-backed products · Prices starting from £140.00 per lock installed',
         ctaCall: 'Call', // will append phone number
         ctaWhatsApp: 'WhatsApp Me',
         ctaQuote: 'Request a Quote',
@@ -137,6 +137,7 @@ export const CONTENT = {
         },
         promises: [
             'No-obligation quotes - valid for 30 days',
+            'Prices starting from £140.00 per lock installed',
             'Cash or bank transfer - no deposit required',
             'Fitting typically within one week',
             'Appointments to suit you - flexible scheduling'

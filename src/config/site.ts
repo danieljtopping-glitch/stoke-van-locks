@@ -15,7 +15,7 @@ export const SITE = {
   },
   whatsapp: {
     // Pre-filled message - URL-encoded
-    href: 'https://wa.me/447843353100?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20van%20locks.%20My%20postcode%20is%20...',
+    href: 'https://wa.me/447843353100?text=Hi%20Dan%2C%20I%27d%20like%20a%20quote.%20Postcode%3A%20_.%20Van%3A%20_%20_%20(year).%20Doors%3A%20_.%20Lock%20type%3A%20_.',
     label: 'WhatsApp Me',
   },
   email: 'Dan@stokevanlocks.co.uk',

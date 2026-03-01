@@ -100,7 +100,7 @@ export const CONTENT = {
         subtitle: 'Examples within my range',
         radiusTitle: 'Just outside the radius?',
         radiusText: 'Get in touch anyway - larger jobs and fleet work outside my usual range may be considered. I\'ll always be upfront about whether I can help.',
-        ctaCheck: 'Check Availability',
+        ctaCheck: 'Request a Quote',
         ctaQuote: 'Request a Quote',
         mapCenter: 'Stoke-on-Trent',
         mapRadius: '~20-mile service radius',
